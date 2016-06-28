@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Train Schedule JaimeV</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" >
+
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Anytime is Train Time</h1>
+			<h3>Choo Choo. Chee Chee.</h3>
+		</div>
+
+		<div class="row">
+		<table class="table table-bordered">
+			<caption>Current Train Schedule</caption>
+			<thead>
+				<tr>
+					<th>Train Name</th>
+					<th>Destination</th>
+					<th>Frequency (min)</th>
+					<th>Next Arrival</th>
+					<th>Minutes Away</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- <tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr> -->
+			</tbody>
+		</table>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-6 col-xs-offset-3">
+				<form id="newTrainForm">
+					<fieldset>
+						<legend>Add Train</legend>
+						<div class="form-group">
+							<label>Train Name</label>
+							<input type="text" id="trainNameInput" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Destination</label>
+							<input type="text" id="destinationInput" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>First Train Time(HH:mm military time)</label>
+							<input type="time" id="timeInput" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Frequency (min)</label>
+							<input type="number" id="frequencyInput" class="form-control">
+						</div>
+						<div class="form-group text-center">
+							<button class="btn btn-primary">
+								Submit
+							</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>
